@@ -3,8 +3,8 @@
 function initMap() {
     // Map options
     const options = {
-        zoom: 15, // Adjust zoom level
-        center: { lat: 37.7749, lng: -122.4194 } // Business location (latitude, longitude)
+        zoom: 1,
+        center: { lat: 37.7749, lng: -122.4194 }
     };
 
     // Initialize map

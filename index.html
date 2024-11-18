@@ -7,7 +7,8 @@
     <title>SMOVS</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/header.css">
-    <!-- <script defer src="js/map.js"></script> -->
+    <script defer src="js/map.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDgPjqwZdmFuXPebIktK4sCJnRWqFT849U&callback=initMap"></script>
 </head>
 
 <body>
@@ -23,25 +24,6 @@
         <div id="smovs-maps-location"></div>
     </footer>
 </body>
-<script>
-    function initMap() {
-        // Map options
-        const options = {
-            zoom: 15,
-            center: { lat: 37.7749, lng: -122.4194 }
-        };
 
-        // Initialize map
-        const map = new google.maps.Map(document.getElementById("smovs-maps-location"), options);
-
-        // Add a marker
-        const marker = new google.maps.Marker({
-            position: { lat: 37.7749, lng: -122.4194 },
-            map: map,
-            title: "Your Business"
-        });
-    }
-</script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDgPjqwZdmFuXPebIktK4sCJnRWqFT849U&callback=initMap"></script>
 
 </html>

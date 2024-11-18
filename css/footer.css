@@ -1,4 +1,5 @@
 #smovs-maps-location {
-    height: 400px;
-    width: 100%; 
+    height: 400dvh;
+    width: 100dvw; 
+    background-color: red;
 }
