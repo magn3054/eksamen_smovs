@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "smovs-regular";
+    src: url("/fonts/wyvern-el-2.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "smovs-bold";
+    src: url("/fonts/wyvern-rg.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+:root {
+    --primary-color: #F49901;
+    --secondary-color: #D5C40B;
+    --success-color: #4FE4E0;
+    --info-color: #5D3A00;
+    --warning-color: #980038;
+    --white-color: #fff;
+    --black-color: #000;
+    --font-regular: "smovs-regular", "Courier New", monospace;
+    --font-bold: "smovs-bold", "Segoe UI", Roboto;
+}
+
+html {
+    width: 100dvw;
+    height: 100dvh;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+}
