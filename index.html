@@ -12,13 +12,13 @@
 
 <body>
     <header>
-        
+
     </header>
-    
+
     <main>
-        
+
     </main>
-    
+
     <footer>
         <div id="smovs-maps-location"></div>
     </footer>
@@ -30,10 +30,10 @@
             zoom: 15,
             center: { lat: 37.7749, lng: -122.4194 }
         };
-        
+
         // Initialize map
         const map = new google.maps.Map(document.getElementById("smovs-maps-location"), options);
-        
+
         // Add a marker
         const marker = new google.maps.Marker({
             position: { lat: 37.7749, lng: -122.4194 },
@@ -42,6 +42,6 @@
         });
     }
 </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDgPjqwZdmFuXPebIktK4sCJnRWqFT849U&callback=initMap" async defer></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDgPjqwZdmFuXPebIktK4sCJnRWqFT849U&callback=initMap"></script>
 
 </html>
