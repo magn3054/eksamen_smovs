@@ -1,9 +1,43 @@
-p {
-    font-family: "smovs-regular";
-    font-size: 100px;
+header {
+    position: fixed;
+    width: 100%;
+    padding: 20px 20px;
+    background: var(--primary-color);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 6px rgb(0 0 0 / 10%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: padding 0.5s ease;
+    z-index: 1000;
 }
 
-h2 {
-    font-family: "smovs-bold";
-    font-size: 100px;
+header.scrolled {
+    padding: 3px 20px;
+    color: var(--info-color);
+}
+
+header.scrolled .nav-links li a {
+    color: var(--info-color);
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links li a {
+    color: #000000;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #007BFF;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
 }
