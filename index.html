@@ -10,33 +10,44 @@
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/footer.css">
     <script defer src="js/header.js"></script>
-    <script defer async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDgPjqwZdmFuXPebIktK4sCJnRWqFT849U&callback=initMap&libraries=marker&map_ids=7a003606d996bab5"></script>
-    <script defer src="js/map.js"></script>
+    <!-- <script defer src="js/footer.js"></script> -->
+    <!-- <script defer src="js/loader.js"></script> -->
 </head>
 
 <body>
-    <header id="dynamic-header">
-        <div class="logo">My Website</div>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+    <header>
+        <section id="mobil-header">
+            <img class="logo" src="img/logo-flat_smovs.webp"></img>
+            <!-- <div class="tabs" onclick="openMenu()">Hej</div> -->
+            <div class="tabs" onclick="openMenu()">
+                <img src="img/wave2.svg" class="tab-icon" id="wave"></img>
+            </div>
+        </section>
+        <nav id="mobil-nav">
+            <a href="#home">MENU</a>
+            <a href="#about">ARRANGEMENTER</a>
+            <a href="#services">TAKE AWAY</a>
+            <a href="#contact">BOOK NU</a>
+            <a href="#contact">OM SMOVS</a> 
         </nav>
     </header>
-    
+    <header id="desktop-header">
+        <img class="logo" src="img/logo-flat_smovs.webp"></img>
+        <nav>
+            <a href="#home">MENU</a>
+            <a href="#about">ARRANGEMENTER</a>
+            <a href="#services">TAKE AWAY</a>
+            <a href="#contact">BOOK NU</a>
+            <a href="#contact">OM SMOVS</a> 
+        </nav>
+    </header>
     <main>
         <section id="home">
-            <h1>Welcome to My Website</h1>
+            <h1>Velkommen til SMOVS</h1>
         </section>
     </main>
-    
     <footer>
         <div id="smovs-maps-location"></div>
     </footer>
 </body>
-
-
 </html>

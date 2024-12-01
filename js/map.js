@@ -2,10 +2,10 @@
 
 function initMap() {
     const options = {
-        zoom: 18,
-        center: { lat: 56.1513500, lng: 10.1847500 },
+        zoom: 15,
         center: { lat: 56.1513500, lng: 10.1850000 },
-        mapTypeId: "satellite",
+        center: { lat: 56.154137, lng: 10.199727 },
+        mapTypeId: "roadmap",
         mapId: "7a003606d996bab5",
         // disableDefaultUI: false, // Keep the default UI but hide specific controls
         zoomControl: true, // Hides the zoom control
