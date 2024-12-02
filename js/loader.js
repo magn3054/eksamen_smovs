@@ -12,12 +12,12 @@ function loadScript(url, callback) {
     document.head.appendChild(script);
 }
 
-// Example usage: Load scripts in sequence
-loadScript('script1.js', () => {
-    loadScript('script2.js', () => {
-        console.log('All scripts loaded!');
-    });
-});
+// // Example usage: Load scripts in sequence
+// loadScript('script1.js', () => {
+//     loadScript('script2.js', () => {
+//         console.log('All scripts loaded!');
+//     });
+// });
 
 
 
@@ -33,4 +33,4 @@ function loadMultiScripts(urls) {
 }
 
 // Example usage
-loadScripts(['script1.js', 'script2.js', 'script3.js']);
+// loadMultiScripts(['script1.js', 'script2.js', 'script3.js']);

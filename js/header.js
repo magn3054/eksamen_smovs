@@ -12,15 +12,52 @@ window.addEventListener('scroll', () => {
 
 function openMenu() {
     const menuTab = document.getElementById("mobil-nav");
-    const menuIcon = document.getElementById("wave");
+    const tabLinks = document.querySelectorAll("#mobil-nav a");
+    const tabs = document.querySelector(".tabs");
+    const tabLines = document.querySelectorAll(".tabline");
     if (menuTab.style.display === "flex") {
-        menuTab.style.display = "none";
-        menuIcon.style.animation = "slide 3s linear";
-        // menuIcon.addEventListener('animationend', () => {
-        //     menuIcon.style.animation = "none";
-        // }, { once: true });
+        tabLinks.forEach(tabLink => {
+            tabLink.style.fontSize = "0rem";
+            menuTab.style.height = "0dvh";
+            menuTab.style.padding = "0rem 0";
+        });
+        setTimeout(() => {
+            menuTab.style.display = "none";
+        }, 500);
+
+        tabLines.forEach(tabLine => {
+            tabLine.style.borderRadius = "50%";
+            tabLine.style.width = "16%";
+            tabs.style.transform = "rotate(0deg)";
+            
+            setTimeout(() => {
+                tabLines.forEach(tabLine => {
+                    tabLine.style.borderRadius = "0%";
+                    tabLine.style.width = "100%";
+                });
+            }, 600);
+        });
     } else {
         menuTab.style.display = "flex";
-        menuIcon.style.animation = "slide 3s linear infinite";
+        setTimeout(() => {
+            tabLinks.forEach(tabLink => {
+                tabLink.style.fontSize = "2rem";
+                menuTab.style.height = "100dvh";
+                menuTab.style.padding = "2rem 0";
+            });
+        }, 500);
+
+        tabLines.forEach(tabLine => {
+            tabLine.style.width = "16%";
+            tabLine.style.borderRadius = "50%";
+            tabs.style.transform = "rotate(90deg)";
+            
+            setTimeout(() => {
+                tabLines.forEach(tabLine => {
+                    tabLine.style.borderRadius = "0%";
+                    tabLine.style.width = "100%";
+                });
+            }, 500);
+        });
     }
 }
