@@ -149,9 +149,9 @@ header {
     }
     
     #mobil-nav a {
-        font-size: 1.8rem;
+        font-size: 1.25rem;
         /* margin: 0 1rem; */
-        padding: 0 1rem;
+        padding: 0.5rem 1rem;
         width: fit-content;
         border-radius: 0.5rem;
     }

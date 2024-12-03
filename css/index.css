@@ -1,8 +1,36 @@
 main {
     display: flex;
     justify-content: center;
-    align-items: center;
+    margin: 5dvw;
     height: 100vh;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    width: 90dvw;
+    border-radius: 0.5rem;
+    background-color: var(--baggrund-farve);
+}
+
+h1 {
+    color: var(--tekst-farve);
+    margin: 0.5rem 0;
+
+}
+
+picture {
+    width: 90%;
+    height: auto;
+}
+
+picture img {
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.382), 0 0 20px 5px var(--lys-turkis), 0 0 5px 2px var(--lys-turkis);
+    width: 100%;
+    height: auto;
 }
 
 @media (min-width: 768px) {

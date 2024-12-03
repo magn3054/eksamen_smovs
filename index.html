@@ -16,14 +16,14 @@
 
 <body>
     <header>
-        <section id="mobil-header">
+        <div id="mobil-header">
             <img class="logo" src="img/logo-flat_smovs.webp"></img>
             <div class="tabs" onclick="openMenu()">
                 <div class="tabline" id="tabline-top"></div>
                 <div class="tabline" id="tabline-mid"></div>
                 <div class="tabline" id="tabline-bot"></div>
             </div>
-        </section>
+        </div>
         <nav id="mobil-nav">
             <a href="#home">MENU</a>
             <a href="#about">ARRANGEMENTER</a>
@@ -35,6 +35,11 @@
     <main>
         <section id="home">
             <h1>Velkommen til SMOVS</h1>
+            <picture>
+                <source media="(min-width: 768px)" srcset="img/restaurant_desk.webp">
+                <img src="img/restaurant-front_mob.webp">
+            </picture>
+            <p>tekst omkring smovs </p>
         </section>
     </main>
     <footer>
