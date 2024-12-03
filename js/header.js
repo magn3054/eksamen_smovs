@@ -1,5 +1,5 @@
 // Select the header element
-const header = document.querySelector('header');
+const header = document.getElementById('mobil-header');
 
 // Add scroll event listener
 window.addEventListener('scroll', () => {
