@@ -1,11 +1,19 @@
+footer {
+    display: block;
+    background-color: var(--smovse-turkis);
+    padding: 25px 0;
+    box-shadow: 0 -5px 6px #00000039;
+}
+
 #smovs-maps-location {
     height: 50dvh;
     width: 50dvw; 
+    z-index: 1;
     background-color: red;
 }
 
 #map-marker {
-    background-image: url("/img/logo_smovs.webp");
+    background-image: url("/./img/logo-border_smovs.webp");
     background-size: contain;
     background-repeat: no-repeat;
     width: 50px; 
@@ -18,5 +26,5 @@
 }
 
 .gm-style-cc {
-    display: none;
+    display: none; 
 }

@@ -15,7 +15,11 @@ function openMenu() {
     const tabLinks = document.querySelectorAll("#mobil-nav a");
     const tabs = document.querySelector(".tabs");
     const tabLines = document.querySelectorAll(".tabline");
+    
+    
+
     if (menuTab.style.display === "flex") {
+        document.body.style.overflow = "visible";
         tabLinks.forEach(tabLink => {
             tabLink.style.fontSize = "0rem";
             menuTab.style.height = "0dvh";
@@ -38,6 +42,7 @@ function openMenu() {
             }, 600);
         });
     } else {
+        document.body.style.overflow = "hidden";
         menuTab.style.display = "flex";
         setTimeout(() => {
             tabLinks.forEach(tabLink => {

@@ -1,8 +1,9 @@
 main {
     display: flex;
-    justify-content: center;
-    margin: 5dvw;
-    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    margin: 1rem;
 }
 
 section {
@@ -11,28 +12,114 @@ section {
     justify-content: center;
     align-items: center;
     height: fit-content;
-    width: 90dvw;
+    width: 75dvw;
+    margin: 0 0 1rem 0;
     border-radius: 0.5rem;
     background-color: var(--baggrund-farve);
 }
 
 h1 {
     color: var(--tekst-farve);
-    margin: 0.5rem 0;
-
+    margin: 0.5rem 0 0 0;
 }
 
-picture {
+#home picture {
     width: 90%;
     height: auto;
 }
 
-picture img {
-    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.382), 0 0 20px 5px var(--lys-turkis), 0 0 5px 2px var(--lys-turkis);
+#home picture img {
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.7), 0 0 50px 5px var(--lys-turkis), 0 0 25px 2px var(--lys-turkis);
     width: 100%;
     height: auto;
+    margin: 1rem 0;
+    border-radius: 0.5rem;
 }
 
-@media (min-width: 768px) {
+#home p {
+    color: var(--tekst-farve);
+    margin: 0 5% 1rem 5%;
+    text-align: center;
+    font-weight: 600;
+}
 
+section:has(.two-article) {
+    gap: 1rem;
+}
+
+.two-article {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 95%;
+    height: fit-content;
+}
+
+.two-article:last-of-type {
+    padding-bottom: 1rem;
+    border-top: var(--varm-vild) solid 2.5px;
+}
+
+.two-article h2 {
+    margin: 0.5rem 0;
+}
+
+.two-article img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+    margin: 0.5rem 0 0 0;
+}
+
+button {
+    line-height: 0.25;
+    background-color: transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.35em;
+    padding: 0.75em 1em;
+    padding-right: 1.25em;
+    color: var(--tekst-farve);
+    border: 1px solid var(--tekst-farve);
+    font-weight: 700;
+    border-radius: 2em;
+    font-size: 1rem;
+    box-shadow: 0 5px 10px -8px #fbec22;
+    transition: transform 0.3s;
+  
+    background: linear-gradient(
+      90deg,
+      /* var(--smovse-turkis) 0%,
+      var(--lys-turkis) 100% */
+      var(--varm-vild) 0%,
+      var(--varm-mild) 100%
+    );
+  }
+
+@media (min-width: 768px) {
+    main {
+        margin: 2rem;
+    }
+
+    .two-article {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 50%;
+        height: fit-content;
+        margin: 1rem 0;
+    }
+    
 }
