@@ -103,6 +103,7 @@ header {
 
 @media (min-width: 768px) {
     header {
+        position: fixed;
         background-image: linear-gradient(to right, var(--smovse-turkis) 55%, var(--lys-turkis) 100%);
         z-index: 1000;
         flex-direction: row;
