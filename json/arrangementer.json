@@ -1,0 +1,71 @@
+[
+    {
+        "title": "Kalabas Kreation",
+        "image": {
+            "mobile": "img/pottery-class.webp",
+            "desktop": "img/pottery-class-desk.webp"
+        },
+        "tekst": [
+            "Lær at lave dine egne kalabas krus.",
+            "På dette kreative kursus får du mulighed for at forvandle en naturlig kalabasfrugt til et smukt og unikt krus, der kan bruges til alt fra varme drikke til dekorative formål.",
+            "Vi starter med en introduktion til kalabasens historie og dens anvendelse i forskellige kulturer verden over.",
+            "Herefter guider vi dig gennem hele processen fra udhulning og rengøring af frugten til design og personlig dekoration.",
+            "Undervejs lærer du teknikker som polering, udskæring og kreative måder at tilpasse dit krus på, f.eks. ved at tilføje mønstre, farver eller naturlige materialer."
+        ],
+        "kalender": {
+            "headers": [
+                "Dato",
+                "Klokken"
+            ],
+            "rows": [
+                {
+                    "Dato": "Onsdag d. 12. maj",
+                    "Klokken": "17:00"
+                },
+                {
+                    "Dato": "Søndag d. 16. maj",
+                    "Klokken": "10:00"
+                },
+                {
+                    "Dato": "Onsdag d. 19. maj",
+                    "Klokken": "17:00"
+                }
+            ]
+        }
+    },
+    {
+        "title": "Frisk Pasta & Ægte Smovs",
+        "image": {
+            "mobile": "img/pasta-workshop.webp",
+            "desktop": "img/pasta-workshop.webp"
+        },
+        "tekst": [
+            "Lær at lave din egen pasta.",
+            "På dette smagfulde kursus får du mulighed for at lære kunsten at lave frisk pasta fra bunden.",
+            "Du vil lære at blande, ælte og rulle dejen, samt forme forskellige typer pasta som tagliatelle, ravioli eller farfalle.",
+            "Vi sørger for alle råvarer og værktøjer, så du kan fokusere på at nyde processen og få hænderne i dejen. Undervejs får du også tips til, hvordan du kan variere din pasta med forskellige smage, farver og fyld.",
+            "Forvent en hyggelig og lærerig oplevelse med fokus på smag, håndværk og det gode måltid. Du afslutter kurset med en hjemmelavet pastaret, klar til at blive nydt på stedet eller taget med hjem.",
+            "Dette kursus er perfekt til dig, der elsker mad og gerne vil prøve kræfter med et håndværk, der kombinerer kreativitet og gastronomi."
+        ],
+        "kalender": {
+            "headers": [
+                "Dato",
+                "Klokken"
+            ],
+            "rows": [
+                {
+                    "Dato": "Torsdag d. 10. april",
+                    "Klokken": "17:00"
+                },
+                {
+                    "Dato": "Søndag d. 20. april",
+                    "Klokken": "10:00"
+                },
+                {
+                    "Dato": "Torsdag d. 24. april",
+                    "Klokken": "17:00"
+                }
+            ]
+        }
+    }
+]

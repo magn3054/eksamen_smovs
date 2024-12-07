@@ -1,3 +1,5 @@
+"use strict";
+
 // Select the header element
 const header = document.getElementById('mobil-header');
 

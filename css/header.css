@@ -1,3 +1,7 @@
+#on-page {
+    text-decoration: underline var(--varm-vild) !important;
+}
+
 header {
     position: sticky;
     top: 0;
@@ -6,7 +10,6 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
-
 }
 
 #mobil-header {
@@ -54,7 +57,6 @@ header {
     color: var(--tekst-farve);
     height: fit-content;
     width: 100%;
-    /* font-size: 2rem; */
     font-size: 0rem;
     font-family: var(--bold-font);
     text-decoration: none;
@@ -114,7 +116,6 @@ header {
         width: fit-content;
     }
     
-        
     #mobil-header.scrolled .logo {
         height: 2rem;
         transition: height 0.5s ease;
@@ -125,6 +126,10 @@ header {
         transition: font-size 0.5s ease, padding 0.5s ease;
     }
     
+    main:nth-of-type(1) {
+        margin-top: 5rem;
+    }
+
     .logo {
         position: relative;
         top: 0;
