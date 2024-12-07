@@ -1,0 +1,72 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    width: 100%;
+    max-width: 30rem;
+    margin: 0 auto;
+}
+
+.form .label {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    gap: 0.5rem;
+}
+
+.form .label:last-of-type {
+    margin: 0 0 1rem 0;
+}
+
+.form .label:has(input:focus) .title {
+    top: 0.25rem;
+    left: 0;
+    color: var(--varm-vild);
+}
+
+.form .label .title {
+    position: relative;
+    top: 1rem;
+    left: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    width: fit-content;
+    padding: 0 0.16rem;
+    transition: all 300ms;
+    color: var(--smovse-turkis);
+    background: var(--baggrund-farve);
+}
+
+.form .input-field {
+    width: auto;
+    height: 3rem;
+    transition: all 0.3s;
+    text-indent: 1rem;
+    color: var(--tekst-farve);
+    border: 1px solid var(--smovse-turkis);
+    border-radius: 0.75rem;
+    outline: none;
+    background-color: transparent;
+}
+
+.form .input-field:hover {
+    border-color: var(--varm-vild);
+}
+
+.input-field:focus {
+    border-color: var(--varm-vild);
+    color: var(--varm-vild);
+}
+
+.input-field:not(:placeholder-shown):not(.input-field[type="date"]):not(.input-field[type="time"]) {
+    color: var(--tekst-farve);
+    border: var(--varm-vild) solid 1px;
+}
+
+.title:has(+.input-field:not(:placeholder-shown):not(.input-field[type="date"]):not(.input-field[type="time"])) {
+    color: var(--varm-vild);
+}
+
+.input-field[type="date"], .input-field[type="time"] {
+    text-indent: 0.5rem;
+}
