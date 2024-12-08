@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $guests = $_POST['guests'];
 
     // Subject for the email
-    $subject = "SMOVS Booking Confirmation";
+    $subject = "SMOVS Booking";
 
     // Build the HTML email content
     $message = "
@@ -167,5 +167,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } catch (Exception $e) {
         echo "Email could not be sent. Mailer Error: {$mail->ErrorInfo}";
     }
+
+    header("Location: booked.html");
+    exit();
 }
 ?>
