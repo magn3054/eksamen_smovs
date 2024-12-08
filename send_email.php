@@ -111,7 +111,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <h1>DIN BOOKINGBEKRÆFTELSE</h1>
         </div>
         <div class='email-body'>
-            <p>Kære $input-name,</p>
+            <p>Kære $name,</p>
             <p>Tak for din booking for $guests personer hos SMOVS.</p>
             <p>Vi ser frem til at byde dig velkommen: <strong>$date, kl. $time</strong>.</p>
             <h3>Informationer om din booking:</h3>
@@ -160,7 +160,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Send the email
         if ($mail->send()) {
-            echo "Email sent successfully!";
+            header("Location: booked.html");
+            exit();
         } else {
             echo "Failed to send email.";
         }
@@ -168,7 +169,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Email could not be sent. Mailer Error: {$mail->ErrorInfo}";
     }
 
-    header("Location: booked.html");
-    exit();
 }
 ?>
