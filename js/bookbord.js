@@ -59,5 +59,5 @@ document.querySelector('.book-btn').addEventListener('click', () => {
     localStorage.setItem('bookingData', JSON.stringify(bookingData));
 
     // Redirect to the next page
-    // window.location.href = 'booked.html';
+    window.location.href = 'booked.html';
 });
