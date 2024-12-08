@@ -157,6 +157,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->isHTML(true);
         $mail->Subject = $subject;
         $mail->Body = $message;
+        $mail->AltBody = "Kære $name,\n\nTak for din booking for $guests personer hos SMOVS.\n\nVi ser frem til at byde dig velkommen:\nDato: $date\nTidspunkt: $time\n\nInformationer om din booking:\n- Navn: $name\n- E-mail: $email\n- Dato: $date\n- Tidspunkt: $time\n- Antal gæster: $guests\n\nTak fordi du har valgt SMOVS!";
 
         // Send the email
         if ($mail->send()) {
