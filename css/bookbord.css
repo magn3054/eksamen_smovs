@@ -139,7 +139,7 @@ form .input-field:hover {
 } 
 
 button,
-[type="sumbit"] {
+[type="submit"] {
     display: flex;
     font-weight: 700;
     line-height: 0.25;
