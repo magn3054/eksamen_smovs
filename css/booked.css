@@ -1,0 +1,60 @@
+main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 1rem;
+}
+
+section {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 75dvw;
+    height: fit-content;
+    margin: 0 0 1rem 0;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background-color: var(--baggrund-farve);
+    overflow: hidden;
+}
+
+h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin: 0 0 1rem 0;
+    color: var(--tekst-farve);
+}
+
+p {
+    font-weight: 600;
+    margin: 0 0 1rem 0;
+    text-align: center;
+    color: var(--tekst-farve);
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+button {
+    display: flex;
+    font-weight: 700;
+    line-height: 0.25;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    text-align: center;
+    color: var(--tekst-farve);
+    border: 1px solid var(--tekst-farve);
+    border-radius: 2rem;
+    background: linear-gradient(to right, var(--varm-vild) 0%, var(--varm-mild) 100%);
+    background: linear-gradient(to right, var(--smovse-turkis) 0%, var(--lys-turkis) 100%);
+}
+
+@media (min-width: 768px) {
+    section {
+        padding: 2rem;
+        border-radius: 1rem;
+    }
+}

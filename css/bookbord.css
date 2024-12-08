@@ -20,6 +20,7 @@ section {
 }
 
 h1 {
+    font-size: 2rem;
     margin: 0 0 0.5rem 0;
     text-decoration: underline var(--varm-vild);
     color: var(--tekst-farve);
@@ -51,7 +52,91 @@ h1 {
     text-align: center;
     text-justify: center;
     color: var(--tekst-farve);
+    cursor: default;
 }
+
+#minus,
+#plus {
+    font-size: 1.25rem;
+    min-width: 4ch;
+    box-shadow: rgba(0, 0, 0, 0.4) 0 2px 4px, rgba(0, 0, 0, 0.3) 0 7px 13px -3px, rgba(0, 0, 0, 0.2) -1px -3px 0 inset;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    width: 100%;
+    max-width: 30rem;
+    margin: 0 auto;
+}
+
+form label {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    gap: 0.5rem;
+}
+
+form label:last-of-type {
+    margin: 0 0 1rem 0;
+}
+
+form label:has(input:focus) .title {
+    top: 0.25rem;
+    left: 0;
+    color: var(--varm-vild);
+}
+
+form label .title {
+    position: relative;
+    top: 1rem;
+    left: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    width: fit-content;
+    padding: 0 0.16rem;
+    transition: all 300ms;
+    color: var(--smovse-turkis);
+    background: var(--baggrund-farve);
+}
+
+form .input-field {
+    width: auto;
+    height: 3rem;
+    transition: all 0.3s;
+    text-indent: 1rem;
+    color: var(--tekst-farve);
+    border: 1px solid var(--smovse-turkis);
+    border-radius: 0.75rem;
+    outline: none;
+    background-color: transparent;
+}
+
+form .input-field:hover {
+    border-color: var(--varm-vild);
+}
+
+.input-field:focus {
+    border-color: var(--varm-vild);
+}
+    
+.title:has(+.input-field:not(:placeholder-shown):not(.input-field[type="date"]):not(.input-field[type="time"])), 
+.input-field:not(:placeholder-shown):not(.input-field[type="date"]):not(.input-field[type="time"]) {
+    border-color: var(--varm-vild); 
+    color: var(--varm-vild);
+}
+
+.input-field[type="date"],
+.input-field[type="time"] {
+    text-indent: 0.5rem;
+    color: #173e4560;
+}
+
+.input-field[type="date"]:valid,
+.input-field[type="time"]:valid {
+    color: var(--varm-vild);
+} 
 
 button,
 [type="button"] {
@@ -68,82 +153,167 @@ button,
     background: linear-gradient(to right, var(--varm-vild) 0%, var(--varm-mild) 100%);
 }
 
-#minus,
-#plus {
-    font-size: 1.25rem;
-    min-width: 4ch;
-    box-shadow: rgba(0, 0, 0, 0.4) 0 2px 4px, rgba(0, 0, 0, 0.3) 0 7px 13px -3px, rgba(0, 0, 0, 0.2) -1px -3px 0 inset;
+.phone-container {
+    display: flex;
+    align-items: center;
+}
+
+.phone-container:hover .country-code, .phone-container:focus-within .country-code, input[type="tel"]:focus {
+    border-color: var(--varm-vild);
+}
+
+*::placeholder {
+    color: #173e4560;
+}
+
+/* Country code dropdown */
+.country-code {
+    height: 3rem;
+    padding: 0 0 0 1rem;
+    border: 1px solid var(--smovse-turkis);
+    background-color: transparent;
+    border-radius: 0.75rem 0 0 0.75rem;
+    border-right: none;
+    font-size: 0.85rem;
+    color: #173e4560;
+    appearance: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.country-code:hover,
+.country-code:focus {
+    border-color: var(--varm-vild);
+}
+
+input[type="tel"] {
+    height: 3rem;
+    width: 100%;
+    color: var(--tekst-farve);
+    border: 1px solid var(--smovse-turkis);
+    border-radius: 0 0.75rem 0.75rem 0;
+    border-left: none;
+    background-color: transparent;
+    transition: all 0.3s;
 }
 
 @media (min-width: 768px) {
-    main {
-        margin: 2rem;
+    section {
+        width: 70vw;
+        padding: 2rem;
+        border-radius: 1rem;
     }
-
-    section:not(#title) {
+    
+    form {
         flex-direction: row;
         flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 100%;
     }
 
-    section h2 {
+    form label {
+        width: calc(50% - 1rem);
+        height: fit-content;
+    }
+
+    form label:has(input:focus) .title {
+        top: 0.25rem;
+        left: 0;
+        color: var(--varm-vild);
+    }
+
+    form label .title {
+        position: relative;
+        top: 1rem;
+        left: 1rem;
+        font-size: 1rem;
+        font-weight: 600;
+        width: fit-content;
+        color: var(--smovse-turkis);
+        background: var(--baggrund-farve);
+    }
+
+    form .input-field {
+        width: auto;
+        height: 3rem;
+        transition: all 0.3s;
+        text-indent: 1rem;
+        color: var(--tekst-farve);
+        border: 1px solid var(--smovse-turkis);
+        border-radius: 0.75rem;
+        outline: none;
+        background-color: transparent;
+    }
+
+    form label:last-of-type {
+        margin: 0 0 0 0;
+    }
+
+    form .input-field:hover {
+        border-color: var(--varm-vild);
+    }
+
+    .input-field:focus {
+        border-color: var(--varm-vild);
+        color: var(--varm-vild);
+    }
+
+    .input-field:not(:placeholder-shown):not(.input-field[type="date"]):not(.input-field[type="time"]) {
+        color: var(--tekst-farve);
+        border-color: var(--varm-vild);
+    }
+
+    .title:has(+.input-field:not(:placeholder-shown):not(.input-field[type="date"]):not(.input-field[type="time"])) {
+        color: var(--varm-vild);
+    }
+
+    .input-field[type="date"],
+    .input-field[type="time"] {
+        text-indent: 0.5rem;
+    }
+
+    label[for="name"] {
+        order: 1;
+    }
+    label[for="email"] {
+        margin: 0;
+        order: 3;
+    }
+
+    label[for="phone"] {
+        order: 5;
+    }
+
+    /* Country code dropdown*/
+    .country-code {
+        border-right: none;
+    } 
+
+    input[type="tel"], input[type="tel"]:focus {
         width: 100%;
-        text-align: center;
+        border-radius: 0 0.75rem 0.75rem 0;
+        border-left: none;
     }
 
-    section picture,
-    .tekst,
-    .buttons,
-    .kalender {
-        width: 45%;
-    }
-
-    section picture img {
-        box-shadow: rgba(0, 0, 0, 0.16) 0 3px 6px, rgba(0, 0, 0, 0.23) 0 3px 6px;
-    }
-
-    .tekst {
-        margin: 0.5rem 0 0 0;
-    }
-
-    .buttons {
-        justify-content: flex-end;
+    label[for="date"] {
         order: 2;
     }
-
-    .kalender {
-        order: 1;
-        width: fit-content;
-        border: var(--tekst-farve) solid 2px;
-        border-radius: 0.5rem;
-        background: radial-gradient(circle, var(--varm-mild) 60%, var(--varm-vild) 100%);
-        box-shadow: rgba(0, 0, 0, 0.16) 0 1px 4px;
+    label[for="time"] {
+        order: 4;
+    }
+    label[for="button"] {
+        order: 6;
+        align-self: flex-end;
+    }
+    
+    .book-btn {
+        font-size: 1.25rem;
+        padding: 1rem 2rem;
     }
 
-    th {
-        display: table-cell;
-        font-family: var(--bold-font);
-        padding: 8px;
-        text-align: center;
-        border-bottom: 1px solid var(--tekst-farve);
-    }
-
-    th:first-of-type {
-        border-right: 1px solid var(--tekst-farve);
-    }
-
-    td {
-        font-weight: 600;
-        padding: 8px;
-        text-align: center;
-        border-right: 1px solid var(--tekst-farve);
-        border-bottom: 1px solid var(--tekst-farve);
-    }
-
-    tr:last-of-type td {
-        border-bottom: none;
-    }
-
-    td:last-of-type {
-        border-right: none;
+    input[type="tel"] {
+        margin: 0;
+        padding: 0;
+        
     }
 }

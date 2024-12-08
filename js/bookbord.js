@@ -33,3 +33,31 @@ plusButton.addEventListener('click', () => {
 });
 
 updateCounter();
+
+
+
+document.querySelector('.book-btn').addEventListener('click', () => {
+    // Saml booking dataen
+    const guestCount = document.getElementById('count').textContent;
+    const name = document.querySelector('input[name="input-name"]').value;
+    const email = document.querySelector('input[name="input-email"]').value;
+    const countryCode = document.querySelector('.country-code').value;
+    const phone = document.querySelector('input[name="input-phone"]').value;
+    const date = document.querySelector('input[name="input-date"]').value;
+    const time = document.querySelector('input[name="input-time"]').value;
+
+    // Gem dataen til localStorage
+    const bookingData = {
+        guestCount,
+        name,
+        email,
+        phone: `${countryCode} ${phone}`,
+        date,
+        time
+    };
+
+    localStorage.setItem('bookingData', JSON.stringify(bookingData));
+
+    // Redirect to the next page
+    // window.location.href = 'booked.html';
+});
