@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->Port = 587;
 
         // Set the sender and recipient
-        $mail->setFrom('websmtp.simply.com', 'SMOVS'); // From address
+        $mail->setFrom('smovs@mdamsgaard.dk', 'SMOVS'); // From address
         $mail->addAddress($to); // Recipient's email address
 
         // Content settings
