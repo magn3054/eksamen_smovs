@@ -111,7 +111,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <h1>DIN BOOKINGBEKRÆFTELSE</h1>
         </div>
         <div class='email-body'>
-            <p>Kære $name,</p>
+            <p>Kære $input-name,</p>
             <p>Tak for din booking for $guests personer hos SMOVS.</p>
             <p>Vi ser frem til at byde dig velkommen: <strong>$date, kl. $time</strong>.</p>
             <h3>Informationer om din booking:</h3>
