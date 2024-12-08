@@ -136,7 +136,7 @@ form .input-field:hover {
 } 
 
 button,
-[type="submit"] {
+.book-btn {
     display: flex;
     line-height: 0.25;
     align-items: center;
