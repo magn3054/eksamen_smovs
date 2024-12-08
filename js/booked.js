@@ -2,8 +2,8 @@
 
 // Henter booking data fra localStorage
 const bookingData = JSON.parse(localStorage.getItem('bookingData'));
+const personer = bookingData.guestCount === '1' ? 'Vi stiller 1 stol frem til dig' : `Vi stiller ${bookingData.guestCount} stole frem til jer`;
 const guest = bookingData.guestCount === '1' ? 'dig' : 'jer';
-const personer = bookingData.guestCount === '1' ? 'Vi stiller 1 stol frem til dig' : 'Vi stiller ${bookingData.guestCount} stole frem til jer';
 
 document.getElementById('confirmation-details').innerHTML = `
     <h1>Tak for din booking ${bookingData.name}!</h1>

@@ -36,17 +36,46 @@ updateCounter();
 
 
 
-document.querySelector('.book-btn').addEventListener('click', () => {
-    // Saml booking dataen
-    const guestCount = document.getElementById('count').textContent;
-    const name = document.querySelector('input[name="input-name"]').value;
-    const email = document.querySelector('input[name="input-email"]').value;
-    const countryCode = document.querySelector('.country-code').value;
-    const phone = document.querySelector('input[name="input-phone"]').value;
-    const date = document.querySelector('input[name="input-date"]').value;
-    const time = document.querySelector('input[name="input-time"]').value;
+// document.querySelector('.book-btn').addEventListener('click', () => {
+//     // Saml booking dataen
+//     const guestCount = document.getElementById('count').textContent;
+//     const name = document.querySelector('input[name="name"]').value;
+//     const email = document.querySelector('input[name="email"]').value;
+//     const countryCode = document.querySelector('.country-code').value;
+//     const phone = document.querySelector('input[name="phone"]').value;
+//     const date = document.querySelector('input[name="date"]').value;
+//     const time = document.querySelector('input[name="time"]').value;
 
-    // Gem dataen til localStorage
+//     // Gem dataen til localStorage
+//     const bookingData = {
+//         guestCount,
+//         name,
+//         email,
+//         phone: `${countryCode} ${phone}`,
+//         date,
+//         time
+//     };
+
+//     localStorage.setItem('bookingData', JSON.stringify(bookingData));
+
+//     // Redirect to the next page
+//     window.location.href = 'booked.html';
+// });
+
+document.querySelector('.book-btn').addEventListener('click', (event) => {
+    // Prevent the default form submission
+    event.preventDefault();
+
+    // Get form values and the guest count
+    const guestCount = document.getElementById('count').textContent;
+    const name = document.querySelector('input[name="name"]').value;
+    const email = document.querySelector('input[name="email"]').value;
+    const countryCode = document.querySelector('.country-code').value;
+    const phone = document.querySelector('input[name="phone"]').value;
+    const date = document.querySelector('input[name="date"]').value;
+    const time = document.querySelector('input[name="time"]').value;
+
+    // Save data to localStorage
     const bookingData = {
         guestCount,
         name,
@@ -58,6 +87,19 @@ document.querySelector('.book-btn').addEventListener('click', () => {
 
     localStorage.setItem('bookingData', JSON.stringify(bookingData));
 
-    // Redirect to the next page
-    window.location.href = 'booked.html';
+    // Add the guest count as a hidden input to the form
+    const form = event.target.closest('form');
+    let guestInput = document.querySelector('input[name="guests"]');
+
+    if (!guestInput) {
+        guestInput = document.createElement('input');
+        guestInput.type = 'hidden';
+        guestInput.name = 'guests';
+        form.appendChild(guestInput);
+    }
+
+    guestInput.value = guestCount;
+
+    // Submit the form
+    form.submit();
 });
