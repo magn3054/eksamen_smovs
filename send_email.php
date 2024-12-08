@@ -3,10 +3,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $to = $_POST['email']; // Brugerens email
     $subject = "SMOVS booking information";
     $message = "Hello " . $_POST['name'] . ",\n\nVi glæder os til at se dig!";
-    $from = "smovs@mdamsgaard.dk"; // Replace with your Simply.com email address
+    $from = ""; // Replace with your Simply.com email address
 
     // Headers
-    $headers = "From: SMOVS <$from>\r\n";
+    $headers = "From: websmtp.simply.com";
     // $headers .= "Reply-To: $from\r\n";
     $headers .= "X-Mailer: PHP/" . phpversion();
 
