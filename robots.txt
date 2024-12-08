@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /*.html
+Disallow: /booked.html
+Disallow: /*.php
+Disallow: /*.md
+
+Sitemap: https://smovs.mdamsgaard.dk/sitemap.xml

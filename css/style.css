@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "smovs-bold";
+    font-family: "smovs-bold", "Courier New", monospace;
     /* border: red solid 1px; */
 }
 
@@ -47,4 +47,11 @@ body {
     width: 100%;
     height: 100%;
     background-color: var(--varm-vild);
+}
+
+img {
+    background-image: url("/img/standby.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }

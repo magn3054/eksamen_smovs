@@ -117,10 +117,10 @@ form .input-field:hover {
 .input-field:focus {
     border-color: var(--varm-vild);
 }
-    
-.title:has(+.input-field:not(:placeholder-shown):not(.input-field[type="date"]):not(.input-field[type="time"])), 
+
+.title:has(+.input-field:not(:placeholder-shown):not(.input-field[type="date"]):not(.input-field[type="time"])),
 .input-field:not(:placeholder-shown):not(.input-field[type="date"]):not(.input-field[type="time"]) {
-    border-color: var(--varm-vild); 
+    border-color: var(--varm-vild);
     color: var(--varm-vild);
 }
 
@@ -133,7 +133,7 @@ form .input-field:hover {
 .input-field[type="date"]:valid,
 .input-field[type="time"]:valid {
     color: var(--varm-vild);
-} 
+}
 
 button,
 .book-btn {
@@ -155,7 +155,9 @@ button,
     align-items: center;
 }
 
-.phone-container:hover .country-code, .phone-container:focus-within .country-code, input[type="tel"]:focus {
+.phone-container:hover .country-code,
+.phone-container:focus-within .country-code,
+input[type="tel"]:focus {
     border-color: var(--varm-vild);
 }
 
@@ -204,7 +206,7 @@ input[type="tel"] {
     h1 {
         font-size: 4rem;
     }
-    
+
     .beskrivelse {
         font-size: 1.5rem;
     }
@@ -289,6 +291,7 @@ input[type="tel"] {
     label[for="name"] {
         order: 1;
     }
+
     label[for="email"] {
         margin: 0;
         order: 3;
@@ -303,9 +306,9 @@ input[type="tel"] {
         border-right: none;
         height: 5rem;
         font-size: 1.1rem;
-    } 
+    }
 
-    input[type="tel"], 
+    input[type="tel"],
     input[type="tel"]:focus {
         width: 100%;
         border-radius: 0 0.75rem 0.75rem 0;
@@ -315,14 +318,16 @@ input[type="tel"] {
     label[for="date"] {
         order: 2;
     }
+
     label[for="time"] {
         order: 4;
     }
+
     label[for="button"] {
         order: 6;
         align-self: flex-end;
     }
-    
+
     .book-btn {
         font-size: 1.5rem;
         padding: 2rem 5rem;
@@ -334,6 +339,6 @@ input[type="tel"] {
         margin: 0;
         padding: 0;
         height: 5rem;
-        
+
     }
 }
