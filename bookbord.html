@@ -1,87 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="da">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book Bord</title>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            $("form").submit(function(e) {
-                e.preventDefault(); // Prevent the form from submitting the default way
-
-                // Serialize the form data
-                var formData = $(this).serialize();
-
-                // Send the data to the PHP script via AJAX
-                $.ajax({
-                    url: "send_email.php", // The PHP file that handles sending the email
-                    type: "POST",
-                    data: formData,
-                    success: function(response) {
-                        // Show the response from PHP (success or failure)
-                        alert(response);
-                    },
-                    error: function() {
-                        alert("An error occurred while sending the email.");
-                    }
-                });
-            });
-        });
-    </script>
+    <title>SMOVS</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/bookbord.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <script defer src="js/header.js"></script>
+    <script defer src="js/footer.js"></script>
+    <script defer src="js/loader.js"></script>
+    <script defer src="js/bookbord.js"></script>
 </head>
+
 <body>
-    <section>
-        <h1>Book Bord</h1>
-        <p class="beskrivelse">Book et bord hos SMOVS og nyd en lækker middag i hyggelige omgivelser.</p>
-
-        <h2>Antal gæster</h2>
-        <div class="counter">
-            <button id="minus">-</button>
-            <p id="count">1</p>
-            <button id="plus">+</button>
+    <header>
+        <div id="mobil-header">
+            <img class="logo" src="img/logo-flat_smovs.webp"></img>
+            <div class="tabs" onclick="openMenu()">
+                <div class="tabline" id="tabline-top"></div>
+                <div class="tabline" id="tabline-mid"></div>
+                <div class="tabline" id="tabline-bot"></div>
+            </div>
         </div>
-
-        <form>
-            <label for="name">
-                <span class="title">Navn</span>
-                <input class="input-field" type="text" name="name" placeholder="Ricardo Navarro" required/>
-            </label>
-
-            <label for="email">
-                <span class="title">E-mail</span>
-                <input class="input-field" type="email" name="email" placeholder="ricardo.navarro@gmail.com" required/>
-            </label>
-
-            <label for="phone">
-                <span class="title">Telefon</span>
-                <div class="phone-container">
-                    <select class="country-code" name="country-code">
-                        <option value="" disabled selected>+45</option>
-                        <option value="+1">+1</option>
-                        <option value="+44">+44</option>
-                        <option value="+49">+49</option>
-                        <option value="+86">+86</option>
-                        <option value="+91">+91</option>
-                    </select>
-                    <input class="input-field" type="tel" name="phone" placeholder="12 34 87 65" required/>
-                </div>
-            </label>
-
-            <label for="date">
-                <span class="title">Dato</span>                      
-                <input class="input-field" type="date" name="date" required/>
-            </label>
-
-            <label for="time">
-                <span class="title">Tidspunkt</span>
-                <input class="input-field" type="time" name="time" required/>
-            </label>
-
-            <label for="button">
-                <input class="book-btn" type="submit" value="Book Bord"/>
-            </label>
-        </form>
-    </section>
+        <nav id="mobil-nav">
+            <a href="#home">MENU</a>
+            <a href="#about">ARRANGEMENTER</a>
+            <a href="#services">TAKE AWAY</a>
+            <a id="on-page" href="#contact">BOOK NU</a>
+            <a href="#contact">OM SMOVS</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h1>Book Bord</h1>
+            <p class="beskrivelse">Book et bord hos SMOVS og nyd en lækker middag i hyggelige omgivelser.</p>
+            <h2>Antal gæster</h2>
+            <div class="counter">
+                <button id="minus">-</button>
+                <p id="count">1</p>
+                <button id="plus">+</button>
+            </div>
+            <form action="send_email.php" method="POST">
+                <label for="name">
+                    <span class="title">Navn</span>
+                    <input class="input-field" type="text" name="input-name" title="Input title" required
+                        placeholder="Ricardo Navarro"/>
+                </label>
+                <label for="email">
+                    <span class="title">E-mail</span>
+                    <input class="input-field" type="email" name="input-email" title="Input title" required
+                        placeholder="ricardo.navarro@gmail.com"/>
+                </label>
+                <label for="phone">
+                    <span class="title">Telefon</span>
+                    <div class="phone-container">
+                        <select class="country-code" name="country-code" title="Select country code">
+                            <option value="+45" selected>+45</option>
+                            <option value="+1">+1</option>
+                            <option value="+44">+44</option>
+                            <option value="+49">+49</option>
+                            <option value="+86">+86</option>
+                            <option value="+91">+91</option>
+                        </select>
+                        <input class="input-field" type="tel" name="input-phone" title="Input title"
+                            placeholder="12 34 87 65"/>
+                    </div>
+                </label>
+                <label for="date">
+                    <span class="title">Dato</span>                      
+                    <input class="input-field" type="date" name="input-date" title="Input title" required/>
+                </label>
+                <label for="time">
+                    <span class="title">Tidspunkt</span>
+                    <input class="input-field" type="time" name="input-time" title="Input title" required/>
+                </label>
+                <label for="button">
+                    <input class="book-btn" type="sumbit" value="Book Bord"/>
+                </label>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <!-- <div id="smovs-maps-location"></div> -->
+    </footer>
 </body>
+
 </html>
