@@ -35,7 +35,7 @@ fetch('/json/arrangementer.json')
             const buttonDiv = document.createElement('div');
             buttonDiv.classList.add('buttons');
             const button = document.createElement('button');
-            button.textContent = 'Tildmeld dig her';
+            button.textContent = 'Tilmeld dig her';
             buttonDiv.appendChild(button);
             arrangmentSection.appendChild(buttonDiv);
 

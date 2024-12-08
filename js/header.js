@@ -1,7 +1,7 @@
 "use strict";
 
 // Select the header element
-const header = document.getElementById('mobil-header');
+const header = document.getElementById('header');
 
 // Add scroll event listener
 window.addEventListener('scroll', () => {

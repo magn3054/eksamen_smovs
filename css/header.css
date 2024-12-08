@@ -12,7 +12,7 @@ header {
     justify-content: center;
 }
 
-#mobil-header {
+#header {
     width: 100%;
     padding: 0.25rem .25rem;
     background-image: linear-gradient(to right, var(--smovse-turkis) 55%, var(--lys-turkis) 100%);
@@ -21,10 +21,6 @@ header {
     align-items: center;
     z-index: 1000;
     color: var(--tekst-farve);
-}
-
-#desktop-header {
-    display: none;
 }
 
 .logo {
@@ -111,30 +107,30 @@ header {
         flex-direction: row;
     }
     
-    #mobil-header {
+    #header {
         background-image: none;
         width: fit-content;
     }
     
-    #mobil-header.scrolled .logo {
-        height: 2rem;
+    #header.scrolled .logo {
+        height: 3rem;
         transition: height 0.5s ease;
     }
 
-    #mobil-header.scrolled ~ #mobil-nav a {
-        font-size: 1.25rem;
+    #header.scrolled ~ #mobil-nav a {
+        font-size: 1.5rem;
         transition: font-size 0.5s ease, padding 0.5s ease;
     }
     
     main:nth-of-type(1) {
-        margin-top: 5rem;
+        margin-top: 8rem;
     }
 
     .logo {
         position: relative;
         top: 0;
         left: 0;
-        height: 3rem;
+        height: 5rem;
         width: auto;
         transition: height 0.5s ease;
         box-shadow: initial;
@@ -155,7 +151,7 @@ header {
     }
     
     #mobil-nav a {
-        font-size: 1.25rem;
+        font-size: 2rem;
         /* margin: 0 1rem; */
         padding: 0.5rem 1rem;
         width: fit-content;

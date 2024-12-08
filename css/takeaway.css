@@ -37,7 +37,6 @@ h1 {
 }
 
 #home p {
-    font-weight: 600;
     margin: 0 5% 1rem 5%;
     text-align: center;
     color: var(--tekst-farve);
@@ -84,7 +83,6 @@ section:has(.two-article) {
 button {
     display: flex;
     font-size: 1rem;
-    font-weight: 700;
     line-height: 0.25;
     align-items: center;
     padding: 0.75rem 1rem;
@@ -121,7 +119,6 @@ button {
     }
     
     #home p {
-        font-weight: 600;
         margin: 0 5% 1rem 5%;
         text-align: center;
         color: var(--tekst-farve);
@@ -175,7 +172,6 @@ button {
     button {
         display: flex;
         font-size: 1rem;
-        font-weight: 700;
         line-height: 0.25;
         align-items: center;
         padding: 0.75rem 1rem;

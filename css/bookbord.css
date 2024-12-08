@@ -27,7 +27,6 @@ h1 {
 }
 
 .beskrivelse {
-    font-weight: 600;
     margin: 0 0 1rem 0;
     text-align: center;
     color: var(--tekst-farve);
@@ -46,7 +45,6 @@ h1 {
 #count {
     font-family: var(--bold-font);
     font-size: 2rem;
-    font-weight: 600;
     min-width: 1ch;
     margin: 0 0.5rem;
     text-align: center;
@@ -93,7 +91,6 @@ form label .title {
     top: 1rem;
     left: 1rem;
     font-size: 1rem;
-    font-weight: 600;
     width: fit-content;
     padding: 0 0.16rem;
     transition: all 300ms;
@@ -141,7 +138,6 @@ form .input-field:hover {
 button,
 [type="submit"] {
     display: flex;
-    font-weight: 700;
     line-height: 0.25;
     align-items: center;
     padding: 0.75rem 1rem;
@@ -151,6 +147,7 @@ button,
     border: 1px solid var(--tekst-farve);
     border-radius: 2rem;
     background: linear-gradient(to right, var(--varm-vild) 0%, var(--varm-mild) 100%);
+    justify-content: center;
 }
 
 .phone-container {
@@ -203,7 +200,24 @@ input[type="tel"] {
         padding: 2rem;
         border-radius: 1rem;
     }
+
+    h1 {
+        font-size: 4rem;
+    }
     
+    .beskrivelse {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    #minus,
+    #plus {
+        font-size: 2.25rem;
+    }
+
     form {
         flex-direction: row;
         flex-wrap: wrap;
@@ -224,10 +238,9 @@ input[type="tel"] {
 
     form label .title {
         position: relative;
-        top: 1rem;
+        top: 1.25rem;
         left: 1rem;
-        font-size: 1rem;
-        font-weight: 600;
+        font-size: 1.5rem;
         width: fit-content;
         color: var(--smovse-turkis);
         background: var(--baggrund-farve);
@@ -235,7 +248,7 @@ input[type="tel"] {
 
     form .input-field {
         width: auto;
-        height: 3rem;
+        height: 5rem;
         transition: all 0.3s;
         text-indent: 1rem;
         color: var(--tekst-farve);
@@ -243,6 +256,7 @@ input[type="tel"] {
         border-radius: 0.75rem;
         outline: none;
         background-color: transparent;
+        font-size: 1.15rem;
     }
 
     form label:last-of-type {
@@ -287,9 +301,12 @@ input[type="tel"] {
     /* Country code dropdown*/
     .country-code {
         border-right: none;
+        height: 5rem;
+        font-size: 1.1rem;
     } 
 
-    input[type="tel"], input[type="tel"]:focus {
+    input[type="tel"], 
+    input[type="tel"]:focus {
         width: 100%;
         border-radius: 0 0.75rem 0.75rem 0;
         border-left: none;
@@ -307,13 +324,16 @@ input[type="tel"] {
     }
     
     .book-btn {
-        font-size: 1.25rem;
-        padding: 1rem 2rem;
+        font-size: 1.5rem;
+        padding: 2rem 5rem;
+        max-width: fit-content;
+        align-self: center;
     }
 
     input[type="tel"] {
         margin: 0;
         padding: 0;
+        height: 5rem;
         
     }
 }
