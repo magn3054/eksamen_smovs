@@ -46,7 +46,6 @@ button {
     color: var(--tekst-farve);
     border: 1px solid var(--tekst-farve);
     border-radius: 2rem;
-    background: linear-gradient(to right, var(--varm-vild) 0%, var(--varm-mild) 100%);
     background: linear-gradient(to right, var(--smovse-turkis) 0%, var(--lys-turkis) 100%);
 }
 

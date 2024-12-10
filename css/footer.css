@@ -84,17 +84,35 @@ footer {
     border-radius: 0.5rem;
 }
 
-#smovs-maps-location * {
+#smovs-maps-location *:not(#map-marker) {
     background-image: none !important;
 }
 
 #map-marker {
     background-image: url("/./img/logo-border_smovs.webp");
-    background-size: contain;
+    background-size: 5rem;
     background-repeat: no-repeat;
-    width: 50px; 
-    height: 50px; 
-    border-radius: 50%;
+    background-position: center;
+    width: 4.25rem; 
+    height: 4.25rem; 
+    /* border-radius: 1rem; */
+    position: relative;
+}
+
+#map-marker::after {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 40%;
+    background-color: var(--smovse-turkis);
+    background-image: url("/./img/logo-border_smovs.webp");
+    background-size: 4rem;
+    background-repeat: no-repeat;
+    background-position: end;
+    top: 100%;
+    left: 50%;
+    clip-path: polygon(100% 0, 0 0, 50% 85%);
+    transform: translate(-50%, 0rem);
 }
 
 .gm-style-cc {
@@ -104,25 +122,58 @@ footer {
 @media (min-width: 768px) {
     footer {
         flex-direction: row;
+        flex-wrap: wrap;
         justify-content: space-between;
         padding: 2.5rem;
     }
 
     .footer-column {
-        flex: 1;
+        flex: 1 1 25%;
         margin-bottom: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: start;
     }
 
-    .footer-column h4 {
-        font-size: 1.2rem;
+    .footer-column h3 {
+        font-size: 1.75rem;
     }
 
+    .footer-column img {
+        width: 5dvw;
+    }
+    
     .footer-column ul li a {
-        font-size: 0.9rem;
+        font-size: 1.12rem;
+    }
+    
+    #follow img {
+        width: 4dvw;
+        margin: 0.5rem;
+    }
+    
+    #follow a {
+        font-size: 1.5dvw;
+    }
+    
+    #open p {
+        font-size: 1.75rem;
+        margin-top: 0.5rem;
+        color: var(--rolig-gron);
+    }
+    
+    #map {
+        order: 5;
+        width: 100dvw;
+        height: 100%;
+        margin-top: 1rem;
+        aspect-ratio: 3/1;
     }
 
     #smovs-maps-location {
-        width: calc(100% - 1rem);
-        margin: 0.5rem 1rem 0 0 ;
+        width: 100%;
+        margin: 0;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     }
 }

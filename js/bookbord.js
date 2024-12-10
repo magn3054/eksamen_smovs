@@ -1,5 +1,5 @@
 "use strict";
-
+/***************Styrer antallet af bookede gæster***************/
 const minusButton = document.getElementById('minus');
 const plusButton = document.getElementById('plus');
 const countDisplay = document.getElementById('count');
@@ -35,59 +35,42 @@ plusButton.addEventListener('click', () => {
 updateCounter();
 
 
+/**************Opdeler tlf nr. i 2 cifre ad gangen**************/
+function formatPhoneNumber(input) {
+    // Stopper bruh fra at skrive bogstaver
+    let phone = input.value.replace(/\D/g, '');
+    // Grupperer telefonnummeret i par
+    phone = phone.match(/.{1,2}/g)?.join(' ') || '';
+    input.value = phone;
+}
 
-// document.querySelector('.book-btn').addEventListener('click', () => {
-//     // Saml booking dataen
-//     const guestCount = document.getElementById('count').textContent;
-//     const name = document.querySelector('input[name="name"]').value;
-//     const email = document.querySelector('input[name="email"]').value;
-//     const countryCode = document.querySelector('.country-code').value;
-//     const phone = document.querySelector('input[name="phone"]').value;
-//     const date = document.querySelector('input[name="date"]').value;
-//     const time = document.querySelector('input[name="time"]').value;
-
-//     // Gem dataen til localStorage
-//     const bookingData = {
-//         guestCount,
-//         name,
-//         email,
-//         phone: `${countryCode} ${phone}`,
-//         date,
-//         time
-//     };
-
-//     localStorage.setItem('bookingData', JSON.stringify(bookingData));
-
-//     // Redirect to the next page
-//     window.location.href = 'booked.html';
-// });
-
+/******** Sender udfyldt form til php med gæste-antal ********/
 document.querySelector('.book-btn').addEventListener('click', (event) => {
-    // Prevent the default form submission
+    // Stopper formen fra at blive sendt med det samme
     event.preventDefault();
 
-    // Get form values and the guest count
+    // Hent form-værdier og gæste antal
     const guestCount = document.getElementById('count').textContent;
     const name = document.querySelector('input[name="name"]').value;
     const email = document.querySelector('input[name="email"]').value;
     const countryCode = document.querySelector('.country-code').value;
     const phone = document.querySelector('input[name="phone"]').value;
     const date = document.querySelector('input[name="date"]').value;
-    const time = document.querySelector('input[name="time"]').value;
+    const hour = document.querySelector('select[name="hour"]').value;
+    const minute = document.querySelector('select[name="minute"]').value;
 
-    // Save data to localStorage
+    // Gemmer data til localStorage
     const bookingData = {
         guestCount,
         name,
         email,
         phone: `${countryCode} ${phone}`,
         date,
-        time
+        time: `${hour}:${minute}`
     };
 
     localStorage.setItem('bookingData', JSON.stringify(bookingData));
 
-    // Add the guest count as a hidden input to the form
     const form = event.target.closest('form');
     let guestInput = document.querySelector('input[name="guests"]');
 
@@ -100,6 +83,5 @@ document.querySelector('.book-btn').addEventListener('click', (event) => {
 
     guestInput.value = guestCount;
 
-    // Submit the form
     form.submit();
 });

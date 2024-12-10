@@ -8,7 +8,7 @@
     <link rel="icon" href="img/favicon-circle.webp" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" href="css/footer.css">
     <script defer src="js/header.js"></script>
     <script defer src="js/footer.js"></script>
@@ -18,7 +18,7 @@
 <body>
     <header>
         <div id="header">
-            <img class="logo" src="img/logo-flat_smovs.webp"></img>
+            <img class="logo" onclick="window.location.href='index.html'" src="img/logo-flat_smovs.webp"></img>
             <div class="tabs" onclick="openMenu()">
                 <div class="tabline" id="tabline-top"></div>
                 <div class="tabline" id="tabline-mid"></div>
@@ -26,35 +26,16 @@
             </div>
         </div>
         <nav id="mobil-nav">
-            <a href="#">MENU</a>
+            <a href="index.html">MENU</a>
             <a href="arrangementer.html">ARRANGEMENTER</a>
-            <a href="takeaway.html">TAKE AWAY</a>
+            <a id="on-page" href="#">TAKE AWAY</a>
             <a href="bookbord.html">BOOK NU</a>
             <a href="#">OM SMOVS</a> 
         </nav>
     </header>
     <main>
-        <section id="home">
-            <h1>Velkommen til SMOVS</h1>
-            <picture>
-                <source media="(min-width: 768px)" srcset="img/restaurant_desk.webp">
-                <img src="img/restaurant-front_mob.webp">
-            </picture>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos labore mollitia explicabo harum molestiae itaque sit blanditiis eveniet vero aut. Quibusdam, unde provident laborum minima asperiores tenetur porro molestias quasi. Quidem, voluptate, pariatur cum illo odio fugiat corporis enim sit debitis ea aliquam velit facilis aperiam eligendi ratione sunt temporibus delectus laudantium, impedit consectetur. Nemo obcaecati sequi nulla asperiores commodi animi blanditiis voluptatem veritatis, incidunt exercitationem maiores pariatur tenetur ratione, corrupti non tempora beatae dignissimos? Laborum maxime fugiat asperiores perferendis, illo error! Nesciunt officia harum officiis earum obcaecati. Recusandae corporis, nesciunt nisi dolores exercitationem quibusdam maiores numquam accusamus quidem debitis.</p>
-        </section>
         <section>
-            <article class="two-article" id="mad-menu">
-                <h2>Mad</h2>
-                <a href=""><img src="img/food.webp" alt=""></a>
-                <div class="buttons">
-                    <button onclick="window.location.href='bookbord.html'">Book Bord</button>
-                    <button onclick="window.location.href='takeaway.html'">Take Away</button>
-                </div>
-            </article>
-            <article class="two-article"  id="drink-menu">
-                <h2>Mate</h2>
-                <a href=""><img src="img/mate.webp" alt=""></a>
-            </article>
+            <h1>SMOVS MENU</h1>
         </section>
     </main>
     <footer>

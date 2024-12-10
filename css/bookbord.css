@@ -196,6 +196,72 @@ input[type="tel"] {
     transition: all 0.3s;
 }
 
+#time {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#hour {
+    margin-left: 1rem;
+}
+
+#hour, 
+#minute {
+    height: 3rem;
+    width: fit-content;
+    text-align: center; 
+    background-color: transparent;
+    border: none;
+    font-size: 1rem;
+    color: var(--tekst-farve);
+    scrollbar-width: none;
+    appearance: none;
+}
+
+#hour:focus-visible, 
+#minute:focus-visible {
+    outline: none;
+}
+
+#hour::-webkit-scrollbar,
+#minute::-webkit-scrollbar {
+    display: none;
+}
+
+#hour option,
+#minute option {
+    color: var(--tekst-farve);
+    background-color: var(--varm-vild);
+}
+
+#hour option[disabled],
+#minute option[disabled] {
+    color: var(--baggrund-farve);
+    background-color: var(--spansk-rod);
+}
+#hour option:hover,
+#minute option:hover {
+    color: var(--baggrund-farve);
+    background-color: var(--spansk-rod);
+}
+
+#colons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 3rem;
+    width: 1rem;
+    gap: 0.25rem 0;
+}
+
+.colon {
+    background-color: var(--tekst-farve);
+    height: 0.25rem;
+    width: 0.25rem;
+}
+
 @media (min-width: 768px) {
     section {
         width: 70vw;
@@ -283,10 +349,11 @@ input[type="tel"] {
         color: var(--varm-vild);
     }
 
-    .input-field[type="date"],
-    .input-field[type="time"] {
+    .input-field[type="date"]{
         text-indent: 0.5rem;
     }
+
+    
 
     label[for="name"] {
         order: 1;
@@ -321,6 +388,11 @@ input[type="tel"] {
 
     label[for="time"] {
         order: 4;
+    }
+
+    #hour, 
+    #minute {
+        font-size: 1.25rem;
     }
 
     label[for="button"] {
