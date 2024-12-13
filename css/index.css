@@ -3,7 +3,6 @@ main {
     align-items: center;
     flex-direction: column;
     min-height: 100vh;
-    margin: 1rem;
 }
 
 section {
@@ -108,7 +107,7 @@ button {
     }
     
     #home picture img {
-        max-height: 50dvh;
+        /* max-height: 50dvh; */
         width: 100%;
         height: auto;
         margin: 1rem 0;

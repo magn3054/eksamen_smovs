@@ -38,9 +38,9 @@
 
 html {
     max-width: 100dvw;
-    height: 100dvh;
     color: var(--tekst-farve);
     font-family: var(--regular-font);
+    overflow-x: hidden;
 }
 
 body {

@@ -1,0 +1,105 @@
+[
+    {
+        "navn": "Taco con Pollo",
+        "pris": 75,
+        "type": "mad",
+        "undertype": "ret"
+    },
+    {
+        "navn": "Carne Burrito",
+        "pris": 85,
+        "type": "mad",
+        "undertype": "ret"
+    },
+    {
+        "navn": "Enchiladas",
+        "pris": 65,
+        "type": "mad",
+        "undertype": "ret"
+    },
+    {
+        "navn": "Vegetarisk Tacotærte",
+        "pris": 65,
+        "type": "mad",
+        "undertype": "ret"
+    },
+    {
+        "navn": "Huveo Rancheros",
+        "pris": 70,
+        "type": "mad",
+        "undertype": "ret"
+    },
+    {
+        "navn": "Churros",
+        "pris": 35,
+        "type": "mad",
+        "undertype": "dessert"
+    },
+    {
+        "navn": "Tres Leches",
+        "pris": 45,
+        "type": "mad",
+        "undertype": "dessert"
+    },
+    {
+        "navn": "Margarita",
+        "pris": 55,
+        "type": "drink",
+        "undertype": "cocktail"
+    },
+    {
+        "navn": "Michelada",
+        "pris": 45,
+        "type": "drink",
+        "undertype": "cocktail"
+    },
+    {
+        "navn": "Mango Passion Cooler",
+        "pris": 45,
+        "type": "drink",
+        "undertype": "mocktail"
+    },
+    {
+        "navn": "Mango Passion Cooler",
+        "pris": 45,
+        "type": "drink",
+        "undertype": "mocktail"
+    },
+    {
+        "navn": "Mango Passion Cooler",
+        "pris": 45,
+        "type": "drink",
+        "undertype": "mocktail"
+    },
+    {
+        "navn": "Mango Passion Cooler",
+        "pris": 45,
+        "type": "drink",
+        "undertype": "mocktail"
+    },
+    {
+        "navn": "Horchata",
+        "pris": 25,
+        "type": "drink",
+        "undertype": "sodajuice"
+    },
+    {
+        "navn": "La Boca Chica",
+        "pris": 90,
+        "type": "vin",
+        "undertype": "hvid"
+    },
+    {
+        "navn": "La Boca Grande",
+        "pris": 90,
+        "type": "vin",
+        "undertype": "rød"
+    },
+    {
+        "navn": "Tortilla Chips & Salsa",
+        "pris": 60,
+        "type": "mad",
+        "undertype": "snack"
+    }
+    
+]

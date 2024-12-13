@@ -13,6 +13,7 @@
     <script defer src="js/header.js"></script>
     <script defer src="js/footer.js"></script>
     <script defer src="js/loader.js"></script>
+    <script defer src="js/menu.js"></script>
 </head>
 
 <body>
@@ -26,17 +27,96 @@
             </div>
         </div>
         <nav id="mobil-nav">
-            <a href="index.html">MENU</a>
+            <a id="on-page" href="#">MENU</a>
             <a href="arrangementer.html">ARRANGEMENTER</a>
-            <a id="on-page" href="#">TAKE AWAY</a>
+            <a href="error.html">TAKE AWAY</a>
             <a href="bookbord.html">BOOK NU</a>
             <a href="#">OM SMOVS</a> 
         </nav>
     </header>
     <main>
-        <section>
-            <h1>SMOVS MENU</h1>
+        <section class="menu-images" id="left-row">
         </section>
+
+        <section class="menu-images" id="right-row">
+        </section>
+
+        <section class="menu-container">
+            <section id="mad" class="menu-kort">
+                <h2>SMOVSE GOD MAD</h2>
+                <article class="menu" id="retter">
+                    <h3>Sydens Specialiteter</h3>
+                    <ul>
+                        <li>Røget Laks med Citron og Dild - 75 kr.</li>
+                        <li>Bruschetta med Tomat og Basilikum - 65 kr.</li>
+                    </ul>
+                </article>
+                <article class="menu" id="desserter">
+                    <h3>Desserter</h3>
+                    <ul>
+                        <li>Bøf Bearnaise med Sprøde Kartofler - 195 kr.</li>
+                        <li>Vegetarisk Lasagne med Friske Grøntsager - 145 kr.</li>
+                    </ul>
+                </article>
+                <article class="menu" id="snacks">
+                    <h3>Snacks</h3>
+                    <ul>
+                        <li>Chokoladefondant med Vaniljeis - 85 kr.</li>
+                        <li>Frisk Frugtsalat med Myntesirup - 65 kr.</li>
+                    </ul>
+                </article>
+            </section>
+            <section id="drinks" class="menu-kort">
+                <h2>DRINKS</h2>
+                <article class="menu" id="cocktails">
+                    <h3>Cocktails</h3>
+                    <ul>
+                        <!-- <li>Smovs Mojito - 90 kr.</li> -->
+                        <!-- <li>Tropisk Margarita - 85 kr.</li> -->
+                    </ul>
+                </article>
+                <article class="menu" id="mocktails">
+                    <h3>Mocktails</h3>
+                    <ul>
+                        <!-- <li>Old Fashioned - 95 kr.</li> -->
+                        <!-- <li>Gin & Tonic - 75 kr.</li> -->
+                    </ul>
+                </article>
+                <article class="menu" id="sodajuice">
+                    <h3>SODAVAND & JUICE</h3>
+                    <ul>
+                        <!-- <li>Chokoladefondant med Vaniljeis - 85 kr.</li> -->
+                        <!-- <li>Frisk Frugtsalat med Myntesirup - 65 kr.</li> -->
+                    </ul>
+                </article>
+            </section>
+            <section id="vin" class="menu-kort">
+                <h2>VIN</h2>
+                <article class="menu" id="rod">
+                    <h3>Rødvin</h3>
+                    <ul>
+                        <!-- <li>Cabernet Sauvignon - 250 kr. pr. flaske</li> -->
+                        <!-- <li>Merlot - 225 kr. pr. flaske</li> -->
+                    </ul>
+                </article>
+                <article class="menu" id="hvid">
+                    <h3>Hvidvin</h3>
+                    <ul>
+                        <!-- <li>Chardonnay - 200 kr. pr. flaske</li> -->
+                        <!-- <li>Sauvignon Blanc - 220 kr. pr. flaske</li> -->
+                    </ul>
+                </article>
+                <article class="menu" id="natur">
+                    <h3>Natur vine</h3>
+                    <ul>
+                        <!-- <li>Chardonnay - 200 kr. pr. flaske</li> -->
+                        <!-- <li>Sauvignon Blanc - 220 kr. pr. flaske</li> -->
+                    </ul>
+                </article>
+            </section>
+        </section>
+
+       
     </main>
     <footer>
         <div class="footer-column" id="om">

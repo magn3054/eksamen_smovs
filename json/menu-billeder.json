@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "img": "/img/brod.jpg",
+        "caption": "Brød"
+    },
+    {
+        "id": 2,
+        "img": "/img/citron-square.webp",
+        "caption": "Nellike lemonade"
+    },
+    {
+        "id": 3,
+        "img": "/img/mate.webp",
+        "caption": "Mate"
+    },
+    {
+        "id": 3,
+        "img": "/img/oliven.jpg",
+        "caption": "Smovse lækre oliven"
+    },
+    {
+        "id": 4,
+        "img": "/img/tacos.jpg",
+        "caption": "Smovse tacos"
+    },
+    {
+        "id": 5,
+        "img": "/img/tapas.jpg",
+        "caption": "Tapas"
+    },
+    {
+        "id": 6,
+        "img": "/img/vindue-vin.jpg",
+        "caption": "Smovse tacos"
+    }
+]

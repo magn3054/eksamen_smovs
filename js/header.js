@@ -17,7 +17,8 @@ function openMenu() {
     const tabLinks = document.querySelectorAll("#mobil-nav a");
     const tabs = document.querySelector(".tabs");
     const tabLines = document.querySelectorAll(".tabline");
-    
+    const main = document.querySelector("main");
+    const footer = document.querySelector("footer");
     
 
     if (menuTab.style.display === "flex") {
@@ -26,6 +27,7 @@ function openMenu() {
             tabLink.style.fontSize = "0rem";
             menuTab.style.height = "0dvh";
             menuTab.style.padding = "0rem 0";
+            header.style.position = "relative";
         });
         setTimeout(() => {
             menuTab.style.display = "none";
@@ -46,6 +48,7 @@ function openMenu() {
     } else {
         document.body.style.overflow = "hidden";
         menuTab.style.display = "flex";
+        header.style.position = "fixed";
         setTimeout(() => {
             tabLinks.forEach(tabLink => {
                 tabLink.style.fontSize = "2rem";
@@ -53,7 +56,7 @@ function openMenu() {
                 menuTab.style.padding = "2rem 0";
             });
         }, 500);
-
+        
         tabLines.forEach(tabLine => {
             tabLine.style.width = "16%";
             tabLine.style.borderRadius = "50%";

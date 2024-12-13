@@ -36,6 +36,7 @@ fetch('/json/arrangementer.json')
             buttonDiv.classList.add('buttons');
             const button = document.createElement('button');
             button.textContent = 'Tilmeld dig her';
+            button.addEventListener('click', () => {window.location.href = "error.html"});
             buttonDiv.appendChild(button);
             arrangmentSection.appendChild(buttonDiv);
 

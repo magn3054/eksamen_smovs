@@ -6,9 +6,12 @@ main {
     margin: 1rem;
 }
 
-section {
+.menu-images {
+    display: none;
+}
+
+.menu-kort {
     display: flex;
-    align-items: center;
     flex-direction: column;
     justify-content: center;
     width: 75dvw;
@@ -19,63 +22,135 @@ section {
     background-color: var(--baggrund-farve);
 }
 
-h1 {
-    margin: 0.5rem 0 0.25rem 0;
-    color: var(--tekst-farve);
-}
-
 h2 {
-    margin: 0 0 1rem 0;
-    color: var(--tekst-farve);
+    font-size: 2rem;
 }
 
-p {
-    margin: 0 0 0.5rem 0;
-    text-align: center;
-}
-
-button {
+.menu-kort .menu {
     display: flex;
-    font-size: 1rem;
-    line-height: 0.25;
+    flex-direction: column;
+    border: 2px solid var(--rolig-gron);
+    background-color: var(--lys-turkis);
+    border-radius: 10px;
+    margin: 1rem 0;
+    padding: 1rem;
+    width: 100%;
+    position: relative;
+}
+
+.menu-kort .menu h3 {
+    color: var(--varm-vild);
+    font-size: 1.75rem;
+}
+
+.menu-kort .menu ul {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    padding-left: 0;
+    height: 100%;
+}
+
+.menu-kort .menu ul li {
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+    flex-grow: 1;
+    display: flex;
     align-items: center;
-    padding: 0.75rem 1rem;
-    padding-right: 1.25rem;
-    cursor: pointer;
-    color: var(--tekst-farve);
-    border: 1px solid var(--tekst-farve);
-    border-radius: 2rem;
-    background: linear-gradient(to right, var(--varm-vild) 0%, var(--varm-mild) 100%);
-    box-shadow: 0 5px 10px -8px #FBEC22;
 }
 
 @media (min-width: 768px) {
     main {
-        margin: 0;
-        justify-content: center;
+        flex-direction: column;
+        justify-content: space-around; 
+        align-items: flex-start; 
+        flex-direction: row; 
+        align-content: flex-start;
+        max-width: 100vw;
+        gap: 0.5rem;
     }
     
-    h1 {
-        font-size: 10rem;
-        margin: 0.5rem 0 0 0;
+    .menu-images {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        order: 1;
+        flex-grow: 1;
+        height: fit-content;
+        z-index: -1;
+        margin-top: 2rem;
+        
+        &:nth-of-type(2) {
+            order: 3;
+    
+            & .polaroid {
+                rotate: -10deg;
+    
+                &:nth-of-type(2n) {
+                    rotate: 15deg;
+                }
+            }
+        }
+    }
+    
+    .polaroid {
+        background: #ffffe8;
+        box-shadow: rgba(0, 0, 0, 0.09) 0px -2px 1px, rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 2px 0px 1px, rgba(0, 0, 0, 0.09) -2px 0px 1px, rgba(0, 0, 0, 0.09) 0px -4px 2px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 4px 0px 2px, rgba(0, 0, 0, 0.09) -4px 0px 2px, rgba(0, 0, 0, 0.09) 0px -8px 4px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,rgba(0, 0, 0, 0.09) 0px 32px 16px;
+        padding: 0.6rem;
+        text-align: center;
+        width: 100%;
+        height: auto;
+        border-radius: 0.25rem;
+        margin: 0 0 4vw 0;
+        filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.5));
+        rotate: 10deg;
+        
+        &:nth-of-type(2n) {
+            rotate: -20deg;
+        }
+    }
+    
+    .polaroid img {
+        width: 100%;
+        max-width: 33dvw;
+        height: auto;
+        aspect-ratio: 1 / 1;
+        /* display: block; */
+        margin-bottom: 0.75rem;
+        border: rgba(72, 70, 70, 0.712) solid 1px;
+        filter: blur(0.5px) brightness(0.9) grayscale(0.1) contrast(1.1) drop-shadow(0 0 0.5rem rgba(0, 0, 0, 0.04));
     }
         
+    .polaroid p {
+        font-size: 1.5rem;
+    }
+    
+    .menu-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        order: 2;   
+    }
+
+    .menu-kort {
+        flex: 0 0 auto;
+        margin: 0 0 1rem 0;
+        width: 50dvw;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
     h2 {
         font-size: 4rem;
         margin: 0 0 1rem 0;
-    }
-
-    p {
-        font-size: 2rem;
-        margin: 0 0 0.75rem 0;
+        width: 100%;
         text-align: center;
     }
     
-    button {
-        font-size: 2rem;
-        padding: 1rem 1rem;
-        border-radius: 2rem;
-        background: linear-gradient(to right, var(--varm-vild) 0%, var(--varm-mild) 100%);
-        box-shadow: 0 5px 10px -8px #FBEC22;
+    .menu-kort .menu {
+        flex: 1 1 calc(50% - 2rem);
+        max-width: calc(50% - 2rem);
+        margin: 1rem;
     }
 }

@@ -36,17 +36,23 @@ p {
 
 button {
     display: flex;
-    font-size: 1rem;
-    line-height: 0.25;
+    position: relative;
     align-items: center;
-    padding: 0.75rem 1rem;
-    padding-right: 1.25rem;
+    width: fit-content;
+    height: fit-content;
+    padding: 0.5rem 3rem;
     cursor: pointer;
     color: var(--tekst-farve);
     border: 1px solid var(--tekst-farve);
     border-radius: 2rem;
     background: linear-gradient(to right, var(--varm-vild) 0%, var(--varm-mild) 100%);
     box-shadow: 0 5px 10px -8px #FBEC22;
+}
+
+button img {
+    width: 1.5rem;
+    height: auto;
+    background: none;
 }
 
 @media (min-width: 768px) {
@@ -78,7 +84,7 @@ button {
     
     button {
         font-size: 2rem;
-        padding: 1rem 1rem;
+        padding: 1rem 4rem;
         border-radius: 2rem;
         background: linear-gradient(to right, var(--varm-vild) 0%, var(--varm-mild) 100%);
         box-shadow: 0 5px 10px -8px #FBEC22;
