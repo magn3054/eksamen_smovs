@@ -14,15 +14,6 @@ function loadScript(url, callback) {
     document.head.appendChild(script);
 }
 
-// // Example usage: Load scripts in sequence
-// loadScript('script1.js', () => {
-//     loadScript('script2.js', () => {
-//         console.log('All scripts loaded!');
-//     });
-// });
-
-
-
 function loadMultiScripts(urls) {
     urls.forEach(url => {
         const script = document.createElement('script');
@@ -33,6 +24,3 @@ function loadMultiScripts(urls) {
         document.head.appendChild(script);
     });
 }
-
-// Example usage
-// loadMultiScripts(['script1.js', 'script2.js', 'script3.js']);
