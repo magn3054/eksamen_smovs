@@ -1,3 +1,4 @@
+"use strict";
 fetch('/json/menu-billeder.json')
     .then(response => response.json())
     .then(data => {

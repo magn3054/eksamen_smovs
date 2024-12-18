@@ -1,0 +1,29 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "SMOVS",
+  "image": "https://example.com/img/restaurant_desk.jpg",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Helle Virkners Plads 5",
+    "addressLocality": "Aarhus C",
+    "postalCode": "8000",
+    "addressCountry": "DK"
+  },
+  "telephone": "+45 28408470",
+  "email": "smovs@mdamsgaard.dk",
+  "url": "https://example.com",
+  "priceRange": "$$",
+  "openingHours": [
+    "Mo-Th 10:00-23:00",
+    "Fr-Sa 13:00-02:00",
+    "Su 10:00-23:00"
+  ],
+  "servesCuisine": ["International", "Dansk"],
+  "menu": "https://example.com/menu.html",
+  "sameAs": [
+    "https://www.instagram.com/fuld_smovs/?hl=da"
+  ]
+}
+</script>

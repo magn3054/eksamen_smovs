@@ -1,3 +1,4 @@
+"use strict";
 fetch('/json/arrangementer.json')
     .then(response => response.json())
     .then(data => {

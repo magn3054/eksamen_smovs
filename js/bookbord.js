@@ -71,7 +71,7 @@ document.querySelector('.book-btn').addEventListener('click', (event) => {
 
     localStorage.setItem('bookingData', JSON.stringify(bookingData));
 
-    const form = event.target.closest('form');
+    const form = document.querySelector('form');
     let guestInput = document.querySelector('input[name="guests"]');
 
     if (!guestInput) {
