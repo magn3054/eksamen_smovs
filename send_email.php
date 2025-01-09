@@ -57,7 +57,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
 
         .email-header {
-            background-color: #000;
+            background-color: var(--varm-vild);
             color: white;
             text-align: center;
             padding: 20px;
@@ -68,7 +68,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             content: '';
             display: block;
             height: 10px;
-            background-color: #e63946;
+            background-color: var(--smovse-turkis);
             position: absolute;
             top: 0;
             left: 0;
