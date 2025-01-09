@@ -1,6 +1,7 @@
 User-agent: *
 Allow: /*.html
 Disallow: /booked.html
+Disallow: /brugertest.html
 Disallow: /*.php
 Disallow: /*.md
 
