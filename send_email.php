@@ -107,7 +107,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
     <div class='email-container'>
         <div class='email-header'>
-            <img src='img/logo-border_smovs.webp' alt='SMOVS logo'>
             <h1>DIN BOOKINGBEKRÆFTELSE</h1>
         </div>
         <div class='email-body'>
