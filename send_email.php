@@ -24,44 +24,32 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset='UTF-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-    <title>Booking Confirmation</title>
+    <title>Booking Konfirmation</title>
     <style>
-        :root {
-            --varm-vild: #F28608;
-            --varm-mild: #FECC45;
-            --pink-pift: #EF6BB4;
-            --rolig-gron: #088371;
-            --gang-gron: #94D539;
-            --spansk-rod: #F6514D;
-            --sydens-sol: #FBEB22;
-            --smovse-turkis: #58DDDC;
-            --lys-turkis: #a9fffe;
-            --baggrund-farve: #FFFCEB;
-            --tekst-farve: #173e45;
-        }
-
         body {
-            background-color: var(--baggrund-farve);
             font-family: Arial, sans-serif;
-            color: var(--tekst-farve);
         }
 
         .email-container {
             max-width: 600px;
             margin: 20px auto;
-            background-color: #fff;
-            border: 1px solid var(--smovse-turkis);
+            background-color: #FFFCEB;
+            border: 1px solid #58DDDC;
             border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
             overflow: hidden;
         }
 
         .email-header {
             background-color: #F28608;
-            color: white;
+            color: #173e45;
             text-align: center;
             padding: 20px;
             position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
         }
 
         .email-header::before {
@@ -75,8 +63,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             width: 100%;
         }
 
+        .email-header img {
+            width: 20%;
+            margin: 0 0;
+        }
+
         .email-header h1 {
-            margin: 0;
+            margin: 0 auto;
             font-size: 24px;
         }
 
@@ -93,21 +86,28 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
 
         .email-footer {
-            background-color: #f3f3f3;
+            background-color: #F28608;
             text-align: center;
             padding: 15px;
             font-size: 14px;
+            color: #173e45;
+            font-weight: bold;
         }
 
         .email-footer a {
-            color: #e63946;
-            text-decoration: none;
+            color: #173e45;
+            text-decoration: underline;
+        }
+
+        .email-footer a:hover {
+            color: #58DDDC;
         }
     </style>
 </head>
 <body>
     <div class='email-container'>
         <div class='email-header'>
+            <img src="img/logo-border_smovs.webp" alt="">
             <h1>DIN BOOKINGBEKRÆFTELSE</h1>
         </div>
         <div class='email-body'>
