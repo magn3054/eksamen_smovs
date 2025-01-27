@@ -37,9 +37,9 @@ updateCounter();
 
 /**************Opdeler tlf nr. i 2 cifre ad gangen**************/
 function formatPhoneNumber(input) {
-    // Stopper bruh fra at skrive bogstaver
+    // Stopper bruger fra at skrive bogstaver, \D = alle karakterer der ikke er tal, g = global, dvs. alle forekomster, // = regular expression
     let phone = input.value.replace(/\D/g, '');
-    // Grupperer telefonnummeret i par
+    // Grupperer telefonnummeret i par, . vælger alle karakterer, {1,2} splitter i grupper af op til 2
     phone = phone.match(/.{1,2}/g)?.join(' ') || '';
     input.value = phone;
 }
@@ -71,6 +71,7 @@ document.querySelector('.book-btn').addEventListener('click', (event) => {
 
     localStorage.setItem('bookingData', JSON.stringify(bookingData));
 
+    // Opretter input-felt til gæste-antal og submitter formen
     const form = document.querySelector('form');
     let guestInput = document.querySelector('input[name="guests"]');
 

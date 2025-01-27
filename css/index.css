@@ -37,7 +37,7 @@ h1 {
 
 #home p {
     margin: 0 5% 1rem 5%;
-    text-align: center;
+    text-align: start;
     color: var(--tekst-farve);
 }
 
@@ -118,7 +118,6 @@ button {
     #home p {
         font-size: 1.5rem;
         margin: 0 5% 1rem 5%;
-        text-align: center;
         color: var(--tekst-farve);
     }
     
