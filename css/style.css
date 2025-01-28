@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "smovs-bold", "Courier New", monospace;
+    /* font-family: "smovs-bold", "Courier New", monospace; */
     /* border: red solid 1px; */
 }
 
@@ -32,7 +32,7 @@
     --lys-turkis: #a9fffe;
     --baggrund-farve: #FFFCEB;
     --tekst-farve: #173e45;
-    --regular-font: "smovs-regular", "Courier New", monospace;
+    --regular-font: arial, sans-serif;
     --bold-font: "smovs-bold", "Segoe UI", Roboto;
 }
 
@@ -54,4 +54,16 @@ img {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+}
+
+h1 {
+    font-family: "smovs-bold";
+}
+
+h2 {
+    font-family: "smovs-bold";
+}
+
+h3 {
+    font-family: "smovs-bold";
 }

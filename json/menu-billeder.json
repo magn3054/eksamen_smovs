@@ -6,11 +6,6 @@
     },
     {
         "id": 2,
-        "img": "/img/citron-square.webp",
-        "caption": "Stjerneanis lemonade"
-    },
-    {
-        "id": 3,
         "img": "/img/mate.webp",
         "caption": "Mate"
     },

@@ -32,7 +32,7 @@ h1 {
     height: auto;
     margin: 1rem 0;
     border-radius: 0.5rem;
-    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.7), 0 0 50px 5px var(--lys-turkis), 0 0 25px 2px var(--lys-turkis);
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.7);
 }
 
 #home p {
@@ -67,6 +67,7 @@ section:has(.two-article) {
     width: 100%;
     height: auto;
     border-radius: 0.5rem;
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.7);
 }
 
 .buttons {
@@ -112,7 +113,6 @@ button {
         height: auto;
         margin: 1rem 0;
         border-radius: 0.5rem;
-        box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.7), 0 0 50px 5px var(--lys-turkis), 0 0 25px 2px var(--lys-turkis);
     }
     
     #home p {
@@ -130,12 +130,13 @@ button {
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        align-self: flex-start;
         width: 90%;
         margin: 1rem 0;
     }
     
     .two-article:last-of-type {
-        padding-bottom: 1rem;
+        /* padding-bottom: 1rem; */
         border-top: none;
         border-left: var(--varm-vild) solid 2.5px;
         margin: 1rem 0;
@@ -143,7 +144,7 @@ button {
     
     .two-article h2 {
         margin: 0.5rem 0;
-        font-size: 3rem;
+        font-size: 2.5rem;
         justify-self: start;
     }
     
@@ -155,6 +156,7 @@ button {
 
     .two-article img {
         width: 75%;
+        aspect-ratio: 1/1;
     }
     
     .buttons {
