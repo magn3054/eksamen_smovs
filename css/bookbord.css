@@ -1,35 +1,5 @@
-main {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    min-height: 100vh;
-    margin: 1rem;
-}
-
-section {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    width: 75dvw;
-    height: fit-content;
-    margin: 0 0 1rem 0;
-    padding: 1rem;
-    border-radius: 0.5rem;
-    background-color: var(--baggrund-farve);
-}
-
-h1 {
-    font-size: 2rem;
-    margin: 0 0 0.5rem 0;
-    text-decoration: underline var(--varm-vild);
-    color: var(--tekst-farve);
-}
-
 .beskrivelse {
-    margin: 0 0 1rem 0;
     text-align: center;
-    color: var(--tekst-farve);
 }
 
 .counter {
@@ -39,7 +9,6 @@ h1 {
     justify-content: center;
     width: 100%;
     height: fit-content;
-    margin: 0 0 1rem 0;
 }
 
 #count {
@@ -58,6 +27,7 @@ h1 {
     font-size: 1.25rem;
     min-width: 4ch;
     box-shadow: rgba(0, 0, 0, 0.4) 0 2px 4px, rgba(0, 0, 0, 0.3) 0 7px 13px -3px, rgba(0, 0, 0, 0.2) -1px -3px 0 inset;
+    justify-content: center;
 }
 
 form {
@@ -65,7 +35,6 @@ form {
     flex-direction: column;
     gap: 0.25rem;
     width: 100%;
-    max-width: 30rem;
     margin: 0 auto;
 }
 
@@ -135,19 +104,9 @@ form .input-field:hover {
     color: var(--varm-vild);
 }
 
-button,
 .book-btn {
-    display: flex;
-    line-height: 0.25;
-    align-items: center;
-    padding: 0.75rem 1rem;
-    cursor: pointer;
-    text-align: center;
-    color: var(--tekst-farve);
-    border: 1px solid var(--tekst-farve);
-    border-radius: 2rem;
-    background: linear-gradient(to right, var(--varm-vild) 0%, var(--varm-mild) 100%);
-    justify-content: center;
+    margin: 0.5rem 0;
+    width: 100%;
 }
 
 .phone-container {
@@ -263,24 +222,6 @@ input[type="tel"] {
 }
 
 @media (min-width: 768px) {
-    section {
-        width: 70vw;
-        padding: 2rem;
-        border-radius: 1rem;
-    }
-
-    h1 {
-        font-size: 4rem;
-    }
-
-    .beskrivelse {
-        font-size: 1.5rem;
-    }
-
-    h2 {
-        font-size: 2.5rem;
-    }
-
     #minus,
     #plus {
         font-size: 2.25rem;
@@ -353,8 +294,6 @@ input[type="tel"] {
         text-indent: 0.5rem;
     }
 
-    
-
     label[for="name"] {
         order: 1;
     }
@@ -401,7 +340,6 @@ input[type="tel"] {
     }
 
     .book-btn {
-        font-size: 1.5rem;
         padding: 2rem 5rem;
         max-width: fit-content;
         align-self: center;

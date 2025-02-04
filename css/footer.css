@@ -15,6 +15,7 @@ footer {
 .footer-column h3 {
     font-size: 1.5rem;
     margin-bottom: 0.25rem;    
+    color: var(--tekst-farve);
 }
 
 .footer-column img {
@@ -43,10 +44,12 @@ footer {
 }
 
 #om p {
+    all: revert;
     margin: 0.25rem 0;
 }
 
 #om a {
+    all: revert;
     text-decoration: none;
     color: var(--tekst-farve);    
 }
@@ -56,6 +59,7 @@ footer {
 }
 
 #follow img {
+    all: revert;
     vertical-align: middle; 
     width: 10dvw;
     height: auto;
@@ -74,7 +78,17 @@ footer {
     color: var(--varm-vild);
 }
 
+#open p {
+    all: revert;
+    margin: 0.25rem 0;
+}
+
+#map img {
+    box-shadow: none;
+}
+
 #smovs-maps-location {
+    all: revert;
     width: 100%;
     height: auto;
     aspect-ratio: 1/1;
@@ -149,6 +163,7 @@ footer {
     }
     
     #follow img {
+        all: revert;
         width: 4dvw;
         margin: 0.5rem;
     }

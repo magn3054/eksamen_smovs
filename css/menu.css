@@ -1,73 +1,19 @@
-main {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    min-height: 100vh;
-    margin: 1rem;
-}
-
 .menu-images {
     display: none;
 }
 
-.menu-kort {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 75dvw;
-    height: fit-content;
-    padding: 1rem;
-    margin: 1rem;
-    border-radius: 0.5rem;
-    background-color: var(--baggrund-farve);
-}
-
-h2 {
-    font-size: 2rem;
-}
-
-.menu-kort .menu {
-    display: flex;
-    flex-direction: column;
+.menu {
     border: 2px solid var(--rolig-gron);
     background-color: var(--lys-turkis);
-    border-radius: 10px;
-    margin: 1rem 0;
+    border-radius: 0.5rem;
     padding: 1rem;
-    width: 100%;
-    position: relative;
-}
-
-.menu-kort .menu h3 {
-    color: var(--varm-vild);
-    font-size: 1.75rem;
-}
-
-.menu-kort .menu ul {
-    display: flex;
-    flex-direction: column;
-    list-style-type: none;
-    padding-left: 0;
-    height: 100%;
-}
-
-.menu-kort .menu ul li {
-    margin: 0.5rem 0;
-    font-size: 1.2rem;
-    flex-grow: 1;
-    display: flex;
-    align-items: center;
+    margin: 0.5rem;
 }
 
 @media (min-width: 768px) {
     main {
-        flex-direction: column;
-        justify-content: space-around; 
-        align-items: flex-start; 
         flex-direction: row; 
-        align-content: flex-start;
-        max-width: 100vw;
-        gap: 0.5rem;
+        align-items: flex-start; 
     }
     
     .menu-images {
@@ -111,46 +57,38 @@ h2 {
     }
     
     .polaroid img {
-        width: 100%;
-        max-width: 33dvw;
-        height: auto;
-        aspect-ratio: 1 / 1;
-        /* display: block; */
         margin-bottom: 0.75rem;
-        border: rgba(72, 70, 70, 0.712) solid 1px;
+        border: rgba(0, 0, 0, 0.75) solid 1px;
+        box-shadow: none;
         filter: blur(0.5px) brightness(0.9) grayscale(0.1) contrast(1.1) drop-shadow(0 0 0.5rem rgba(0, 0, 0, 0.04));
+        border-radius: 0;
     }
         
     .polaroid p {
-        font-size: 1.5rem;
+        margin: 0;
+        text-align: center;
     }
     
     .menu-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
         order: 2;   
     }
 
     .menu-kort {
-        flex: 0 0 auto;
-        margin: 0 0 1rem 0;
         width: 50dvw;
+        display: flex;
         flex-wrap: wrap;
         flex-direction: row;
         justify-content: flex-start;
+        align-items: flex-start;
     }
 
     h2 {
-        font-size: 4rem;
-        margin: 0 0 1rem 0;
         width: 100%;
         text-align: center;
     }
     
     .menu-kort .menu {
-        flex: 1 1 calc(50% - 2rem);
         max-width: calc(50% - 2rem);
-        margin: 1rem;
+        min-width: calc(50% - 1rem);
     }
 }
