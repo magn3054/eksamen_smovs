@@ -99,6 +99,13 @@ p {
     margin: 0 5% 1rem 5%;
     text-align: left;
     color: var(--tekst-farve);
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+a {
+    text-decoration: none;
+    color: var(--tekst-farve);
 }
 
 p:first-of-type {
